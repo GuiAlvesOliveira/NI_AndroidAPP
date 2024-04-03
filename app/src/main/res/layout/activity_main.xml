@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#20000000"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="58dp"
+        android:layout_height="67dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02"
+        app:srcCompat="@drawable/r6" />
+
+    <TextView
+        android:id="@+id/idTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:foregroundTint="#070707"
+        android:text="RainbowSix"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/ISubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qual Operador de ataque você mais usa ?"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTitulo"
+        app:layout_constraintVertical_bias="0.062" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="398dp"
+        android:layout_height="193dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.378"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ISubtitle"
+        app:layout_constraintVertical_bias="0.042">
+
+        <RadioButton
+            android:id="@+id/Ash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ash" />
+
+        <RadioButton
+            android:id="@+id/Sledge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sledge" />
+
+        <RadioButton
+            android:id="@+id/Thermite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thermite" />
+
+        <RadioButton
+            android:id="@+id/Blitz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blitz" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/texto2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qual Operador de defesa você mais usa ?"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.126" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="392dp"
+        android:layout_height="216dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/Pulse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pulse" />
+
+        <RadioButton
+            android:id="@+id/Lesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lesion" />
+
+        <RadioButton
+            android:id="@+id/Doc"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:text="Doc" />
+
+        <RadioButton
+            android:id="@+id/Bandit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bandit" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/IdEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="alertDialog"
+        android:text="Enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+        app:layout_constraintVertical_bias="0.981" />
+
+    <SeekBar
+        android:id="@+id/seekBarFq"
+        android:layout_width="194dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/IdEnviar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+        app:layout_constraintVertical_bias="0.938" />
+
+    <TextView
+        android:id="@+id/idFrequencia"
+        android:layout_width="247dp"
+        android:layout_height="43dp"
+        android:text="Com Qual Frequencia você usa os operadores ? "
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarFq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
